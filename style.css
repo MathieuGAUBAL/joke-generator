@@ -1,0 +1,324 @@
+/*GLOBAL*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
+
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+}
+
+#picture-title{
+    margin: auto;
+}
+
+body{
+    background-color: rgb(230, 230, 230);
+}
+
+.selectors-type{
+    display: flex;
+    justify-content:space-between;
+    margin: auto;
+    padding: 1rem 0 1rem 0;
+}
+
+.radio{
+    display: flex;
+}
+
+.radio input{
+    margin-right: 5px;
+}
+
+img{
+    width: 100%;
+}
+
+span {
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color: grey;
+}
+
+html,.screen-phone {
+   overflow:hidden;
+}
+
+.form-user{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    align-items: end;
+}
+
+.form{
+    padding: 0.5em;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+}
+
+.screen-phone{
+    margin: auto;
+    background-color: #fff;
+    height: 320px;
+    border-radius: 10px;
+    border: 2px solid rgb(181, 181, 181);
+}
+
+.btn-section{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.question p, .answer p{
+    padding: 0 10px 0 10px;
+    color:#fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn-tell-me, .btn-another{
+    width: 250px;
+    height: 70px;
+    border-radius: 5px;
+    border: none;
+    font-size:xx-large;
+    background-color: #2c84d6;
+    color: #fff;
+    animation-duration: 0.5s;
+    animation-name: glissementBasHaut;
+    animation-iteration-count:1;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn-another{
+    display: none;
+    width: 250px;
+    height: 70px;
+    border-radius: 5px;
+    border: none;
+    font-size:xx-large;
+    background-color: #a501af!important;
+    color: #fff;
+}
+
+.btn-settings, .quit-setting, td button, .control-pages button {
+    margin: 0 20px 0 20px;
+    padding: 5px; 
+    border-radius: 5px;
+    border: none;
+    background-color: #2c84d6;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.control-pages{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.div-btn-quit{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.quit-setting{
+    background-color: grey;
+    margin-right: 1rem;
+}
+
+.settings-section{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(230, 230, 230);
+    overflow:scroll!important;
+}
+
+.question{
+    display: flex;
+    background-color:#a501af;
+    width: 80%;
+    border-radius: 10px;
+    margin: 20px 0 0 10px;
+    animation-duration: 0.5s;
+    animation-name: glissementAller;
+    animation-iteration-count:1;
+    padding: 1.5rem;
+}
+
+.answer{
+    display: flex;
+    background-color:rgba(68, 135, 205, 1);
+    width: 80%;
+    border-radius: 10px;
+    margin: 20px 0 0 1%;
+    animation-duration: 0.5s;
+    animation-name: glissementRetour;
+    animation-iteration-count:1;
+    padding: 1.5rem;
+}
+
+/*TABLE*/
+
+#table-jokes {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #table-jokes td, #table-jokes th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #table-jokes tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #table-jokes tr:hover {background-color: #ddd;}
+  
+  #table-jokes th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:#a501af;
+    color: white;
+  }
+
+  td button{
+    background-color: #ff0000ad;
+  }
+
+@keyframes glissementAller {
+    from {
+      margin-left: -300%;
+      width: 100%;
+    }
+  }
+
+@keyframes glissementRetour {
+    from {
+      margin-left: 300%;
+      width: 100%;
+    }
+  }
+
+@keyframes glissementBasHaut {
+    from {
+        margin-top: 600%;
+    }
+    to {
+        margin-top: 0%;
+    }
+  }
+
+/*size small device*/
+@media (max-width:480px){
+    #picture-title{
+        margin-top: 30px;
+        width: 80%;
+    }
+
+    .screen-phone{
+        height: 320px;
+    }
+
+    .answer{
+        margin: 20px 0 0 25%;
+        width: 60%;
+    }
+
+    .selectors-type{
+        justify-content:space-between;
+        width: 95%;
+    }
+
+    .form-user{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+/*size tablette device*/
+@media (min-width:481px) and (max-width:1024px){
+    #picture-title{
+        margin-top: 50px;
+        width: 80%;
+    }
+
+
+    .screen-phone{
+        height: 420px;
+        width: 80%;
+    }
+
+    .selectors-type{
+        font-size: 1.5rem;
+        width: 80%;
+    }
+
+    .question p, .answer p{
+        font-size: 1.5rem;
+    }
+
+    .answer{
+        margin: 20px 0 0 30%;
+        width: 60%;
+    }
+
+    .form{
+        width: 80%;
+    }
+
+    .form-user{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-user textarea{
+        width: 80%;
+    }
+
+
+}
+
+/*size computer device*/
+@media (min-width:1025px){
+    #picture-title{
+        margin-top: 50px;
+        width: 20%;
+    }
+
+    .screen-phone{
+        width: 50%;
+    }
+
+    .btn-section{
+        margin: auto;
+        width: 80%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .selectors-type{
+        font-size: 1.5rem;
+        width: 50%;
+    }
+
+    .question p, .answer p{
+        font-size: 1.5rem;
+    }
+
+    .answer{
+        margin: 20px 0 0 31%;
+        width: 60%;
+    }
+}
+
+
+

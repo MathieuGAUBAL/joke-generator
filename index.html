@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le comptoir des blagues</title>
+    <script src="./auth.js" type="module"></script>
+    <script src="app.js" type="module"></script>
+    <script src="https://unpkg.com/blagues-api@2.1.0/dist/blagues-api.umd.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main>
+        <section class="settings-section">
+            <div class="div-btn-quit"><button type="button" class="quit-setting">Close</button></div>
+            <div class="form-user">
+                <div class="form">
+                    <label for="joke-question" name="joke-question">Question
+                        <textarea type="text" id="joke-question" required></textarea>
+                    </label>
+                </div>
+                <div class="form">
+                    <label for="joke-answer" name="joke-answer">Answer
+                        <textarea type="text" id="joke-answer" required></textarea>
+                    </label>
+                </div>
+                <div class="form">
+                    <label for="types-select">Choose a type</label>
+                    <select name="types" id="types-select">
+                        <option value="default">--choose a type --</option>
+                        <option value="global">Global</option>
+                        <option value="dev">Dev</option>
+                        <option value="beauf">Beauf</option>
+                    </select>
+                    <button type="button" class="add-joke">Add</button>
+                </div>
+            </div>
+
+            <div class="list-jokes"></div>
+            <div class="control-pages">
+                <button type="button" class="btn-previous">previous</button>
+                <span class="number-page"></span>
+                <button type="button" class="btn-next">next</button>
+            </div>
+
+        </section>
+        <div id='picture-title'>
+            <img src='https://dadjokegenerator.com/logo.png' alt='title-app' />
+        </div>
+
+        <section class="selectors-type">
+            <div class="radio">
+                <input type="radio" id="global" name="choose" checked>
+                <label for="global"><span>Global</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="dev" name="choose">
+                <label for="dev"><span> Dev</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="beauf" name="choose">
+                <label for="beauf"><span>Beauf</span></label>
+            </div>
+            <div>
+                <button type="button" class="btn-settings">settings</button>
+            </div>
+        </section>
+
+        <section class="screen-phone"></section>
+        <section class="btn-section">
+            <button class="btn-tell-me" type="button">Tell Me!</button>
+            <button class="btn-another" type="button">Another joke!</button>
+        </section>
+    </main>
+</body>
+
+</html>
